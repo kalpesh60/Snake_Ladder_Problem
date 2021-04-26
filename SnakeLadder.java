@@ -4,6 +4,8 @@ public class SnakeLadder
    {
    System.out.println("Welcome to the Snake & Ladder Program");
    int PlayerPosition = 0;
+   while (PlayerPosition <= 100)
+   {
    int RollDice = ((int)(Math.random() * 6)+1);
    int Options = ((int)(Math.random() * 3)+1);
    System.out.println("rolldice="+RollDice);
@@ -24,5 +26,11 @@ public class SnakeLadder
          System.out.println("back-"+RollDice);
          break;
       }
+      if (PlayerPosition < 0)
+          PlayerPosition = 0;
+      }
+      if (PlayerPosition >= 100)
+      System.out.println("winner"+PlayerPosition);
    }
 }
+
